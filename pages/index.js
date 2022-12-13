@@ -11,7 +11,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <header className={styles.header}>
+      <header>
         <nav>
           <img />
           <a href="/">Home</a>
@@ -20,7 +20,57 @@ export default function Home() {
         </nav>
       </header>
       <main className={styles.main}>
-        <h1>hola</h1>
+        <a href="/">
+          <h2>Event in London</h2>
+          <p>
+            <span>
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sequi
+              porro dolore aliquam placeat odio perspiciatis deleniti
+              voluptates. Laboriosam dolores soluta reprehenderit, atque quasi
+              ullam id nemo architecto quidem vel pariatur?
+            </span>
+            <span>
+              Hic impedit nam eligendi temporibus eum, eos laudantium quibusdam
+              praesentium delectus doloremque dignissimos non, est nobis
+              inventore ullam corporis. Praesentium totam obcaecati maiores
+              adipisci, itaque velit nisi necessitatibus impedit quisquam?
+            </span>
+          </p>
+        </a>
+        <a href="/">
+          <h2>Event in San Francisco</h2>
+          <p>
+            <span>
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sequi
+              porro dolore aliquam placeat odio perspiciatis deleniti
+              voluptates. Laboriosam dolores soluta reprehenderit, atque quasi
+              ullam id nemo architecto quidem vel pariatur?
+            </span>
+            <span>
+              Hic impedit nam eligendi temporibus eum, eos laudantium quibusdam
+              praesentium delectus doloremque dignissimos non, est nobis
+              inventore ullam corporis. Praesentium totam obcaecati maiores
+              adipisci, itaque velit nisi necessitatibus impedit quisquam?
+            </span>
+          </p>
+        </a>
+        <a href="/">
+          <h2>Event in Barcelona</h2>
+          <p>
+            <span>
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sequi
+              porro dolore aliquam placeat odio perspiciatis deleniti
+              voluptates. Laboriosam dolores soluta reprehenderit, atque quasi
+              ullam id nemo architecto quidem vel pariatur?
+            </span>
+            <span>
+              Hic impedit nam eligendi temporibus eum, eos laudantium quibusdam
+              praesentium delectus doloremque dignissimos non, est nobis
+              inventore ullam corporis. Praesentium totam obcaecati maiores
+              adipisci, itaque velit nisi necessitatibus impedit quisquam?
+            </span>
+          </p>
+        </a>
       </main>
 
       <footer className={styles.footer}></footer>
