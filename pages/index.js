@@ -41,16 +41,28 @@ export default function Home() {
           <h2>Event in San Francisco</h2>
           <p>
             <span>
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sequi
-              porro dolore aliquam placeat odio perspiciatis deleniti
-              voluptates. Laboriosam dolores soluta reprehenderit, atque quasi
-              ullam id nemo architecto quidem vel pariatur?
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Commodi
+              dolore, beatae fugit similique nisi inventore delectus cupiditate,
+              sed sunt voluptatum, incidunt iure rem omnis quidem alias
+              repellendus quisquam hic. Mollitia!
             </span>
             <span>
-              Hic impedit nam eligendi temporibus eum, eos laudantium quibusdam
-              praesentium delectus doloremque dignissimos non, est nobis
-              inventore ullam corporis. Praesentium totam obcaecati maiores
-              adipisci, itaque velit nisi necessitatibus impedit quisquam?
+              Sapiente pariatur sunt similique omnis consectetur. Impedit
+              consequuntur maxime deleniti quas, laborum architecto, voluptas
+              odio temporibus vel dignissimos, maiores totam ipsa perferendis
+              quasi qui nemo dicta commodi eum cupiditate sequi.
+            </span>
+            <span>
+              Quisquam culpa perspiciatis fugit nemo quaerat a labore! Harum
+              doloremque magni facere quidem exercitationem distinctio deleniti
+              neque enim nemo amet dolore, cupiditate velit. Reprehenderit unde
+              odit nulla numquam et neque.
+            </span>
+            <span>
+              Recusandae ratione asperiores corporis laudantium itaque
+              distinctio. Est quam animi commodi maiores, cumque ullam odit
+              optio quidem minus ipsa, ut natus maxime perspiciatis quo modi
+              quaerat accusamus voluptate voluptates debitis?
             </span>
           </p>
         </a>
@@ -58,16 +70,22 @@ export default function Home() {
           <h2>Event in Barcelona</h2>
           <p>
             <span>
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sequi
-              porro dolore aliquam placeat odio perspiciatis deleniti
-              voluptates. Laboriosam dolores soluta reprehenderit, atque quasi
-              ullam id nemo architecto quidem vel pariatur?
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit,
+              quaerat praesentium. Ullam laudantium suscipit aut blanditiis
+              iusto recusandae error, sit quibusdam aperiam ipsam repellat
+              ducimus molestias, rem magnam aliquid architecto?
             </span>
             <span>
-              Hic impedit nam eligendi temporibus eum, eos laudantium quibusdam
-              praesentium delectus doloremque dignissimos non, est nobis
-              inventore ullam corporis. Praesentium totam obcaecati maiores
-              adipisci, itaque velit nisi necessitatibus impedit quisquam?
+              Nam, suscipit cum. Error, nihil nobis! Mollitia quos accusamus
+              quam obcaecati laboriosam, nisi delectus blanditiis tenetur
+              placeat vero eum iusto omnis voluptates dolorem molestiae commodi
+              labore et culpa corporis quaerat?
+            </span>
+            <span>
+              Sit consequuntur, dolore consectetur voluptates et molestias
+              quaerat hic, officia atque dolores vel corrupti placeat minima.
+              Asperiores ratione atque aspernatur quidem officia quos!
+              Laudantium dicta reiciendis repudiandae maxime laborum cum.
             </span>
           </p>
         </a>
