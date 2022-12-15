@@ -1,4 +1,4 @@
-const Page = ({ title }) => {
+const EventsPage = ({ title }) => {
   return (
     <div>
       <h1>{title}</h1>
@@ -18,7 +18,7 @@ const Page = ({ title }) => {
   );
 };
 
-export default Page;
+export default EventsPage;
 
 export function getServerSideProps() {
   return {

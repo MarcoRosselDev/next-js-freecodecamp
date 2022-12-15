@@ -20,7 +20,7 @@ export default function Home() {
         </nav>
       </header>
       <main className={styles.main}>
-        <a href="/">
+        <a href="/events/london">
           <h2>Event in London</h2>
           <p>
             <span>
@@ -37,7 +37,7 @@ export default function Home() {
             </span>
           </p>
         </a>
-        <a href="/">
+        <a href="/events/sanfran">
           <h2>Event in San Francisco</h2>
           <p>
             <span>
@@ -66,7 +66,7 @@ export default function Home() {
             </span>
           </p>
         </a>
-        <a href="/">
+        <a href="/events/barcelona">
           <h2>Event in Barcelona</h2>
           <p>
             <span>
@@ -94,4 +94,12 @@ export default function Home() {
       <footer className={styles.footer}></footer>
     </div>
   );
+}
+
+export function getServerSideProps() {
+  return {
+    props: {
+      title: "Hello everyone!",
+    },
+  };
 }
