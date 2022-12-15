@@ -2,7 +2,7 @@ import Head from "next/head";
 import Image from "next/image";
 import styles from "../styles/Home.module.css";
 
-export default function Home() {
+export default function Home({ data }) {
   return (
     <div className={styles.container}>
       <Head>
@@ -20,75 +20,13 @@ export default function Home() {
         </nav>
       </header>
       <main className={styles.main}>
-        <a href="/events/london">
-          <h2>Event in London</h2>
-          <p>
-            <span>
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sequi
-              porro dolore aliquam placeat odio perspiciatis deleniti
-              voluptates. Laboriosam dolores soluta reprehenderit, atque quasi
-              ullam id nemo architecto quidem vel pariatur?
-            </span>
-            <span>
-              Hic impedit nam eligendi temporibus eum, eos laudantium quibusdam
-              praesentium delectus doloremque dignissimos non, est nobis
-              inventore ullam corporis. Praesentium totam obcaecati maiores
-              adipisci, itaque velit nisi necessitatibus impedit quisquam?
-            </span>
-          </p>
-        </a>
-        <a href="/events/sanfran">
-          <h2>Event in San Francisco</h2>
-          <p>
-            <span>
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Commodi
-              dolore, beatae fugit similique nisi inventore delectus cupiditate,
-              sed sunt voluptatum, incidunt iure rem omnis quidem alias
-              repellendus quisquam hic. Mollitia!
-            </span>
-            <span>
-              Sapiente pariatur sunt similique omnis consectetur. Impedit
-              consequuntur maxime deleniti quas, laborum architecto, voluptas
-              odio temporibus vel dignissimos, maiores totam ipsa perferendis
-              quasi qui nemo dicta commodi eum cupiditate sequi.
-            </span>
-            <span>
-              Quisquam culpa perspiciatis fugit nemo quaerat a labore! Harum
-              doloremque magni facere quidem exercitationem distinctio deleniti
-              neque enim nemo amet dolore, cupiditate velit. Reprehenderit unde
-              odit nulla numquam et neque.
-            </span>
-            <span>
-              Recusandae ratione asperiores corporis laudantium itaque
-              distinctio. Est quam animi commodi maiores, cumque ullam odit
-              optio quidem minus ipsa, ut natus maxime perspiciatis quo modi
-              quaerat accusamus voluptate voluptates debitis?
-            </span>
-          </p>
-        </a>
-        <a href="/events/barcelona">
-          <h2>Event in Barcelona</h2>
-          <p>
-            <span>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit,
-              quaerat praesentium. Ullam laudantium suscipit aut blanditiis
-              iusto recusandae error, sit quibusdam aperiam ipsam repellat
-              ducimus molestias, rem magnam aliquid architecto?
-            </span>
-            <span>
-              Nam, suscipit cum. Error, nihil nobis! Mollitia quos accusamus
-              quam obcaecati laboriosam, nisi delectus blanditiis tenetur
-              placeat vero eum iusto omnis voluptates dolorem molestiae commodi
-              labore et culpa corporis quaerat?
-            </span>
-            <span>
-              Sit consequuntur, dolore consectetur voluptates et molestias
-              quaerat hic, officia atque dolores vel corrupti placeat minima.
-              Asperiores ratione atque aspernatur quidem officia quos!
-              Laudantium dicta reiciendis repudiandae maxime laborum cum.
-            </span>
-          </p>
-        </a>
+        {data.map((ev) => (
+          <a key={ev.id} href={`events/${ev.id}`}>
+            <img src={ev.image} />
+            <h2>{ev.title}</h2>
+            <p>{ev.description}</p>
+          </a>
+        ))}
       </main>
 
       <footer className={styles.footer}></footer>
@@ -96,10 +34,13 @@ export default function Home() {
   );
 }
 
-export function getServerSideProps() {
+export async function getServerSideProps() {
+  const { events_categories } = await import("/data/data.json");
+  console.log(events_categories);
+
   return {
     props: {
-      title: "Hello everyone!",
+      data: events_categories,
     },
   };
 }
