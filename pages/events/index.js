@@ -1,29 +1,29 @@
-const Page = () => {
+const Page = ({ title }) => {
   return (
     <div>
-      <h1>Events Page</h1>
-      <p>
-        <span>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid,
-          minus cupiditate veniam tempore ex ullam, eligendi, exercitationem
-          quam aut voluptate sed esse voluptatum. Sequi expedita, architecto
-          ipsum consectetur dignissimos quasi.
-        </span>
-        <span>
-          Ex fugit ut corporis, odio ducimus ea sed repellendus dolorum adipisci
-          quas possimus soluta voluptas unde doloremque beatae ipsam?
-          Perspiciatis, in libero tempore nulla esse consequuntur omnis sit odit
-          distinctio.
-        </span>
-        <span>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid,
-          minus cupiditate veniam tempore ex ullam, eligendi, exercitationem
-          quam aut voluptate sed esse voluptatum. Sequi expedita, architecto
-          ipsum consectetur dignissimos quasi.
-        </span>
-      </p>
+      <h1>{title}</h1>
+
+      <div>
+        <a href="">
+          <img /> <h2>Events in London</h2>{" "}
+        </a>
+        <a href="">
+          <img /> <h2>Events in San Francisco</h2>{" "}
+        </a>
+        <a href="">
+          <img /> <h2>Events in Barcelona</h2>{" "}
+        </a>
+      </div>
     </div>
   );
 };
 
 export default Page;
+
+export function getServerSideProps() {
+  return {
+    props: {
+      title: "Hello everyone!",
+    },
+  };
+}
