@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 const EventsCatPage = ({ data }) => {
   return (
@@ -6,17 +7,15 @@ const EventsCatPage = ({ data }) => {
       <h1>Events in London </h1>
       <div>
         {data.map((ev) => (
-          <a key={ev.id} href={`/events/${ev.city}/${ev.id}`}>
-            <Image
-              key={ev.id}
-              src={ev.image}
-              alt={ev.title}
-              width={300}
-              height={300}
-            />
+          <Link
+            key={ev.id}
+            href={`/events/${ev.city}/${ev.id}`}
+            passHref={true}
+          >
+            <Image src={ev.image} alt={ev.title} width={300} height={300} />
             <h2>{ev.title}</h2>
             <p>{ev.description}</p>
-          </a>
+          </Link>
         ))}
       </div>
     </div>
