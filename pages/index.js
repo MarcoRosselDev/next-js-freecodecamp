@@ -14,9 +14,15 @@ export default function Home({ data }) {
 
       <header>
         <nav>
-          <Link href="/">Home</Link>
-          <Link href="/events"> Events</Link>
-          <Link href="/about-us"> About Us</Link>
+          <Link href="/" passHref>
+            Home
+          </Link>
+          <Link href="/events" passHref>
+            Events
+          </Link>
+          <Link href="/about-us" passHref>
+            About Us
+          </Link>
         </nav>
       </header>
       <main className={styles.main}>

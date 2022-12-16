@@ -5,7 +5,7 @@ const EventsPage = ({ data }) => {
   return (
     <div>
       {data.map((ev) => (
-        <Link href={`/events/${ev.id}`}>
+        <Link href={`/events/${ev.id}`} passHref>
           <Image
             key={ev.id}
             src={ev.image}
