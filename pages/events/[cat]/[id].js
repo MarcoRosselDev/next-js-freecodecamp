@@ -1,4 +1,5 @@
-const EventPage = () => {
+const EventPage = ({ data }) => {
+  console.log(data);
   return <h1>Our Single Event</h1>;
 };
 
@@ -7,6 +8,7 @@ export default EventPage;
 export async function getStaticPaths() {
   const data = await import("/data/data.json");
 
+  // const { allEvents } = await import("/data/data.json"); es mas rapido asi
   const allEvents = data.allEvents;
   const allPaths = allEvents.map((path) => {
     return {
@@ -24,8 +26,11 @@ export async function getStaticPaths() {
 }
 
 export async function getStaticProps(context) {
-  console.log(context);
+  const id = context.params.id;
+  const { allEvents } = await import("/data/data.json");
+  const eventData = allEvents.filter((ev) => id === ev.id);
+
   return {
-    props: {},
+    props: { data: eventData },
   };
 }
