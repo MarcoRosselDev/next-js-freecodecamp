@@ -20,10 +20,11 @@ const EventsPage = ({ title }) => {
 
 export default EventsPage;
 
-export function getServerSideProps() {
+export async function getStaticProps() {
+  const { events_categories } = await import("/data/data.json");
   return {
     props: {
-      title: "Hello everyone!",
+      data: events_categories,
     },
   };
 }
